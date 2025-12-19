@@ -116,11 +116,11 @@ function initTypewriter() {
     if (!typewriter) return;
     
     const texts = [
-        'Software Engineer',
-        'Backend Developer',
-        '.NET Core Specialist',
-        'CI/CD Expert',
-        'API Developer'
+        'Full Stack Engineer',
+        'C# & .NET Core Developer',
+        'Python & FastAPI Developer',
+        'React & TypeScript Developer',
+        'CI/CD & DevOps Enthusiast'
     ];
     
     let textIndex = 0;
@@ -583,20 +583,20 @@ initPerformanceOptimizations();
 
 // Console easter egg for developers who inspect the code
 console.log(`
-🚀 Welcome to S.V.S.K Devi Prakash Kandikonda's Portfolio!
+🚀 Welcome to Devi Prakash Kandikonda's Portfolio!
 
 ✨ Recent Updates:
-   • 500+ NuGet Downloads now highlighted in GeminiSharp section
-   • Enhanced professional summary with 2+ years experience details
-   • Programming language and framework icons added to skills
-   • Removed railway tracking system use case images as requested
+   • Added AI-Powered API Assistant project
+   • Updated GeminiSharp to 2,500+ Downloads
+   • Enhanced professional summary and skills
+   • Updated experience at Ingram Micro
 
 👨‍💻 Interested in the code? Check out the repository:
    GitHub: https://github.com/dprakash2101
 
 💼 Want to connect? Find me on:
-   LinkedIn: https://linkedin.com/in/s-v-s-k-devi-prakash-kandikonda-44a09b194
-   Email: dprakash0321@gmail.com
+   LinkedIn: https://www.linkedin.com/in/devi-prakash-kandikonda/
+   Email: deviprakash9321@gmail.com
 
 ⭐ Built with vanilla JavaScript, CSS Grid, and lots of ☕
 
