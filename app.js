@@ -68,11 +68,9 @@ function initNavigation() {
         const currentScroll = window.pageYOffset;
         const navbarHeight = navbar ? navbar.offsetHeight : 70;
         
-        // Navbar background opacity on scroll
-        if (currentScroll > 50) {
-            if (navbar) navbar.style.background = 'rgba(13, 17, 23, 0.98)';
-        } else {
-            if (navbar) navbar.style.background = 'rgba(13, 17, 23, 0.95)';
+        // Toggle visual state for scrolled navbar
+        if (navbar) {
+            navbar.classList.toggle('scrolled', currentScroll > 50);
         }
 
         // Update active nav link based on scroll position
@@ -587,7 +585,8 @@ console.log(`
 
 ✨ Recent Updates:
    • Added AI-Powered API Assistant project
-   • Updated GeminiSharp to 2,500+ Downloads
+   • Added SpecDrift Agent for OpenAPI drift reconciliation
+   • Added multi-language open-source SDK automation work
    • Enhanced professional summary and skills
    • Updated experience at Ingram Micro
 
@@ -631,7 +630,7 @@ function validateSectionIds() {
 // Run validation
 validateSectionIds();
 
-// Add a subtle animation to the featured highlight in GeminiSharp project
+// Add a subtle animation to the featured highlight in projects
 function initFeaturedHighlight() {
     const featuredHighlight = document.querySelector('.highlight.featured');
     
