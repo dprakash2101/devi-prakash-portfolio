@@ -587,7 +587,7 @@ console.log(`
 
 ✨ Recent Updates:
    • Added AI-Powered API Assistant project
-   • Updated GeminiSharp to 2,500+ Downloads
+   • Added SpecDrift Agent for OpenAPI drift reconciliation
    • Enhanced professional summary and skills
    • Updated experience at Ingram Micro
 
@@ -631,7 +631,7 @@ function validateSectionIds() {
 // Run validation
 validateSectionIds();
 
-// Add a subtle animation to the featured highlight in GeminiSharp project
+// Add a subtle animation to the featured highlight in projects
 function initFeaturedHighlight() {
     const featuredHighlight = document.querySelector('.highlight.featured');
     
