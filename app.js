@@ -245,10 +245,12 @@ function initCopyEmail() {
 
 // Scroll animations for various elements
 function initScrollAnimations() {
-    // Create intersection observer for fade-in animations
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    // Trigger animation slightly before the element enters view.
     const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
+        threshold: 0.03,
+        rootMargin: '0px 0px 120px 0px'
     };
 
     const observer = new IntersectionObserver((entries) => {
@@ -256,6 +258,7 @@ function initScrollAnimations() {
             if (entry.isIntersecting) {
                 entry.target.style.opacity = '1';
                 entry.target.style.transform = 'translateY(0)';
+                observer.unobserve(entry.target);
             }
         });
     }, observerOptions);
@@ -275,9 +278,17 @@ function initScrollAnimations() {
     // Set initial state and observe elements
     animatedElements.forEach((element, index) => {
         if (element) {
+            if (prefersReducedMotion) {
+                element.style.opacity = '1';
+                element.style.transform = 'translateY(0)';
+                return;
+            }
+
+            // Small repeated stagger keeps the UI lively without slowing lower sections.
+            const staggerDelay = (index % 4) * 0.05;
             element.style.opacity = '0';
-            element.style.transform = 'translateY(30px)';
-            element.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
+            element.style.transform = 'translateY(18px)';
+            element.style.transition = `opacity 0.42s ease ${staggerDelay}s, transform 0.42s ease ${staggerDelay}s`;
             observer.observe(element);
         }
     });
